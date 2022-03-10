@@ -12,6 +12,7 @@ body {
   letter-spacing: 1px;
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 
 /* ***************** CONTENT ************** */
@@ -26,6 +27,8 @@ body {
   "card1 hold card2"
   ;
 }
+
+/* ***************** BUTTONS **************** */
  
 button {
   font-size: 35px;
@@ -47,9 +50,21 @@ button:hover {
   grid-area: btn1;
 }
 
+.btn-Roll {
+  margin-top: 50px;
+  grid-area: hold;
+}
+
+.btn-Hold {
+  margin-top: 130px;
+  grid-area: hold;
+}
+
 .Hold {
   font-size: 27px;
 }
+
+/* ****************** CARDS *************** */
 
 .cards {
   height: 600px;
@@ -104,16 +119,6 @@ button:hover {
   top: 30px;
   font-size: 40px;
   color: white;
-}
-
-.btn-Roll {
-  margin-top: 50px;
-  grid-area: hold;
-}
-
-.btn-Hold {
-  margin-top: 130px;
-  grid-area: hold;
 }
 
 /* *********************** CUBE ****************** */
@@ -298,10 +303,154 @@ button:hover {
   grid-area: dice;
 }
 
-/* *********************** KEYFRAMES *********************** */
+/* ************ BREAKPOINT ************** */
 
+@media only screen 
+   and (max-width : 1234px) {
+    button {
+      font-size: 32px;
+    }
+    .cards {
+      height: 600px;
+      width: 300px;
+      display: block;
+      margin: auto;
+    }
+}
 
-/* *******************  END ****************** */
+@media only screen 
+   and (max-width : 830px) {
+    .cards {
+      height: 500px;
+      width: 200px;
+      display: block;
+      margin: auto;
+    }
+    .title-1, .title-2 {
+      margin-top: 80px;
+      font-weight: 100;
+      font-size: 2em;
+    }
+    .center-nb {
+      margin-top: 50px;
+      margin-bottom: 90px;
+      font-size: 4.5em;
+      color: orange;
+    }
+}
+
+@media only screen 
+   and (max-width : 624px) {
+    .cards {
+      height: 350px;
+      width: 150px;
+      display: block;
+      margin: auto;
+      position: relative;
+      top: 130px;
+    }
+
+    .btn-reset {
+      margin-top: 25px;
+      font-size: 25px;
+      grid-area: btn1;
+    }
+
+    .title-1, .title-2 {
+      margin-top: 80px;
+      font-weight: 100;
+      font-size: 1em;
+    }
+    .center-nb {
+      margin-top: 50px;
+      margin-bottom: 50px;
+      font-size: 3em;
+      color: orange;
+    }
+    .result-p1, .result-p2 {
+      display: block;
+      margin: auto;
+      height: 70px;
+      width: 80px;
+      background: orange;
+    }
+    .text-1, .text-2 {
+      position: relative;
+      top: 15px;
+      font-size: 10px;
+    }
+    .number-1, .number-2 {
+      position: relative;
+      top: 20px;
+      font-size: 20px;
+      color: white;
+    }
+    .container {
+      height: 200px;
+      width: 200px;
+      perspective: 9000px;
+      margin: 50px auto 0;
+    }
+
+    .btn-Roll {
+      margin-top: 0px;
+      grid-area: hold;
+    }
+    
+    .btn-Hold {
+      margin-top: 70px;
+      grid-area: hold;
+    }
+
+    .Roll {
+      font-size: 25px;
+    }
+
+    .Hold {
+      font-size: 20px;
+    }
+}
+
+@media only screen 
+   and (max-width : 506px) {
+   .cards {
+      height: 350px;
+      width: 100px;
+      display: block;
+      margin: auto;
+      position: relative;
+      top: 130px;
+    }
+}
+
+@media only screen 
+   and (max-width : 399px) {
+   .cards {
+      height: 350px;
+      width: 90px;
+      display: block;
+      margin: auto;
+      position: relative;
+      top: 400px;
+    }
+    .card-1 {
+      position: relative;
+      left: 50px
+    }
+    .card-2 {
+      position: relative;
+      left: -50px
+    }
+    body {
+      overflow: visible;
+    }
+    .container {
+      margin: 100px auto 0;
+    }
+
+}
+
+/* ******************** END *************** */
 
 
 
