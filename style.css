@@ -1,0 +1,307 @@
+@import('https://fonts.googleapis.com/css2? famille=Lato:wght@100&display=swap');
+
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  letter-spacing: 1px;
+  margin: 0;
+  padding: 0;
+}
+
+/* ***************** CONTENT ************** */
+
+.container-grid {
+  display: grid;
+  grid-auto-rows: 1fr 400px 250px;
+  grid-template-columns: 2fr 2.5fr 2fr;
+  grid-template-areas: 
+  "none btn1 none1"
+  "card1 dice card2"
+  "card1 hold card2"
+  ;
+}
+ 
+button {
+  font-size: 35px;
+  font-family: 'Lato', sans-serif;
+  border: none;
+  background: transparent;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all ease 0.5s;
+}
+
+button:hover {
+  transition: all ease 0.5s;
+  color: orange;
+}
+
+.btn-newGame {
+  margin-top: 40px;
+  grid-area: btn1;
+}
+
+.Hold {
+  font-size: 27px;
+}
+
+.cards {
+  height: 600px;
+  width: 400px;
+  background: lightgray;
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  display: block;
+  margin: auto;
+}
+
+.card-1 {
+  margin-top: 30px;
+  margin-left: 100px;
+  grid-area: card1;
+}
+
+.title-1, .title-2 {
+  margin-top: 80px;
+  font-weight: 100;
+  font-size: 3em;
+}
+
+.center-nb {
+  margin-top: 50px;
+  margin-bottom: 130px;
+  font-size: 5em;
+  color: orange;
+}
+
+.card-2 {
+  margin-top: 30px;
+  margin-right: 100px;
+  grid-area: card2;
+}
+
+.result-p1, .result-p2 {
+  display: block;
+  margin: auto;
+  height: 100px;
+  width: 150px;
+  background: orange;
+}
+
+.text-1, .text-2 {
+  position: relative;
+  top: 20px;
+}
+
+.number-1, .number-2 {
+  position: relative;
+  top: 30px;
+  font-size: 40px;
+  color: white;
+}
+
+.btn-Roll {
+  margin-top: 50px;
+  grid-area: hold;
+}
+
+.btn-Hold {
+  margin-top: 130px;
+  grid-area: hold;
+}
+
+/* *********************** CUBE ****************** */
+
+.container {
+  height: 200px;
+  width: 200px;
+  perspective: 1000px;
+  margin: 160px auto 0;
+}
+
+.cube {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: spin 15s infinite linear;
+}
+
+/* ********************** FACES ********************* */
+
+.face {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border: white solid 3px;
+}
+
+.front  {
+  background: #D2B48C;
+  opacity: 0.8;
+  transform: rotateX(0deg) translateZ(100px);
+}
+
+.front .dot1 {
+  top: 73px;
+  left: 73px;
+} 
+
+.back {
+  background: #D2B48C;
+  opacity: 0.8;
+  transform: rotateX(-180deg) translateZ(100px);
+}
+
+.back .dot1 {
+  top: 30px;
+  left: 30px;
+}
+
+.back .dot2 {
+  top: 125px;
+  left: 125px;
+}
+
+.right {
+  background: #D2B48C;
+  opacity: 0.8;
+  transform: rotateY(90deg) translateZ(100px);
+}
+
+.right .dot1 {
+  top: 30px;
+  left: 20px;
+}
+
+.right .dot2 {
+  top: 80px;
+  left: 73px;
+}
+
+.right .dot3 {
+  top: 125px;
+  left: 125px;
+}
+
+.left {
+  background: #D2B48C;
+  opacity: 0.8;
+  transform: rotateY(-90deg) translateZ(100px);
+}
+
+.left .dot1 {
+  top: 30px;
+  left: 30px
+}
+
+.left .dot2 {
+  top: 30px;
+  left: 125px
+}
+
+.left .dot3 {
+  top: 125px;
+  left: 30px;
+}
+
+.left .dot4 {
+  top: 125px;
+  left: 125px;
+}
+
+.top {
+  background: #D2B48C;
+  opacity: 0.8;
+  transform: rotateX(90deg) translateZ(100px);
+}
+
+.top .dot1 {
+  top: 30px;
+  left: 30px;
+}
+
+.top .dot2 {
+  top: 30px;
+  left: 125px;
+}
+
+.top .dot3 {
+  top: 75px;
+  left: 78px;
+}
+
+.top .dot4 {
+  top: 125px;
+  left: 30px;
+}
+
+.top .dot5 {
+  top: 125px;
+  left: 125px;
+}
+
+.bottom {
+  background: #D2B48C;
+  opacity: 0.8;
+  transform: rotateX(-90deg) translateZ(100px);
+}
+
+.bottom .dot1 {
+  top: 30px;
+  left: 30px;
+}
+
+.bottom .dot2 {
+  top: 78px;
+  left: 124px;
+}
+
+.bottom .dot3 {
+  top: 30px;
+  left: 125px;
+}
+
+.bottom .dot4 {
+  top: 125px;
+  left: 30px;
+}
+
+.bottom .dot5 {
+  top: 78px;
+  left: 30px;
+}
+
+.bottom .dot6 {
+  top: 125px;
+  left: 125px;
+}
+
+/* ************************ DOTS *********************** */
+
+.dots, .dot1, .dot2, .dot3, .dot4, .dot5, .dot6 {
+  background: black;
+  height: 40px;
+  width: 40px;
+  border-radius: 50px;
+  position: absolute;
+  display: block;
+}
+
+.container {
+  grid-area: dice;
+}
+
+/* *********************** KEYFRAMES *********************** */
+
+
+/* *******************  END ****************** */
+
+
+

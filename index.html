@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DICE GAME</title>
+
+  <link rel="stylesheet" href="./style.css">
+  <link rel="shortcut icon" href="./media/Shortcut-icon-1.png">
+  <script src="https://kit.fontawesome.com/42fc5b57ab.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <main class="container-grid">
+
+    <div class="btn-newGame">
+      <i class="fa-solid fa-plus fa-2x" style="color: orange; margin-right: 5px;"></i>
+      <button class="btn-reset" type="reset">New Game</button>
+    </div>
+
+    <div class="container">
+      <div class="cube">
+  
+        <div class="face front">
+          <span class="dots dot1"></span>
+        </div>
+  
+        <div class="face back">
+          <span class="dots dot1"></span>
+          <span class="dots dot2"></span>
+        </div>
+  
+        <div class="face right">
+          <span class="dots dot1"></span>
+          <span class="dots dot2"></span>
+          <span class="dots dot3"></span>
+        </div>
+  
+        <div class="face left">
+          <span class="dots dot1"></span>
+          <span class="dots dot2"></span>
+          <span class="dots dot3"></span>
+          <span class="dots dot4"></span>
+        </div>
+  
+        <div class="face top">
+          <span class="dots dot1"></span>
+          <span class="dots dot2"></span>
+          <span class="dots dot3"></span>
+          <span class="dots dot4"></span>
+          <span class="dots dot5"></span>
+        </div>
+  
+        <div class="face bottom">
+          <span class="dots dot1"></span>
+          <span class="dots dot2"></span>
+          <span class="dots dot3"></span>
+          <span class="dots dot4"></span>
+          <span class="dots dot5"></span>
+          <span class="dots dot6"></span>
+        </div>
+  
+      </div>
+    </div> 
+
+    <div class="btn-Roll">
+      <i class="fa-solid fa-arrows-rotate fa-2x" style="color: orange; margin-right: 3px;"></i>
+      <button>Roll</button>
+    </div>
+
+    <div class="btn-Hold">
+      <i class="fa-solid fa-arrow-down fa-xl" style="color: orange; margin-right: 3px;"></i>
+      <button class="Hold">Hold</button>
+    </div>
+
+    <div class="cards card-1">
+      <h2 class="title-1">Player 1</h2>
+      <p class="center-nb">43</p>
+
+      <div class="result-p1">
+        <p class="text-1">Current</p>
+        <span class="number-1">10</span>
+      </div>
+    </div>
+
+    <div class="cards card-2">
+      <h2 class="title-2">Player 2</h2>
+      <p class="center-nb">72</p>
+
+      <div class="result-p2">
+        <p class="text-2">Current</p>
+        <span class="number-2">23</span>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="./index.js"></script>
+</body>
+</html>
