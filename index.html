@@ -14,13 +14,10 @@
 
   <main class="container-grid">
 
-    <div class="btn-newGame">
-      <i class="fa-solid fa-plus fa-2x" style="color: orange; margin-right: 5px;"></i>
-      <button class="btn-reset" type="reset">New Game</button>
-    </div>
+    <!------------------------ CUBE -------------------------->
 
     <div class="container">
-      <div class="cube">
+      <div class="cube rolling">
   
         <div class="face front">
           <span class="dots dot1"></span>
@@ -64,33 +61,42 @@
       </div>
     </div> 
 
+    <!------------------------ BUTTONS -------------------------->
+
+    <div class="btn-newGame">
+      <i class="fa-solid fa-plus fa-2x" style="color: orange; margin-right: 5px;"></i>
+      <button class="btn-reset btn-new-game" type="reset">New Game</button>
+    </div>
+
     <div class="btn-Roll">
       <i class="fa-solid fa-arrows-rotate fa-2x" style="color: orange; margin-right: 3px;"></i>
-      <button class="Roll">Roll</button>
+      <button class="Roll rollBtn rolling">Roll</button>
     </div>
 
     <div class="btn-Hold">
       <i class="fa-solid fa-arrow-down fa-xl" style="color: orange; margin-right: 3px;"></i>
-      <button class="Hold">Hold</button>
+      <button class="Hold btn-hold">Hold</button>
     </div>
 
-    <div class="cards card-1">
-      <h2 class="title-1">Player 1</h2>
-      <p class="center-nb">43</p>
+    <!------------------------ PLAYER SECTION -------------------------->
 
-      <div class="result-p1">
-        <p class="text-1">Current</p>
-        <span class="number-1">10</span>
+    <div class="cards card-1 player-0-panel active">
+      <h2 class="title-1 player-name" id="name-0">Player 1</h2>
+      <p class="Global-Score-P1 player-score" id="score-0">0</p>
+
+      <div class="result-p1 player-current-label">
+        <p class="text-1 gagne">Current</p>
+        <span class="score-1 player-current-score" id="current-0">75</span>
       </div>
     </div>
 
-    <div class="cards card-2">
-      <h2 class="title-2">Player 2</h2>
-      <p class="center-nb">72</p>
+    <div class="cards card-2 player-1-panel">
+      <h2 class="title-2 player-name" id="name-1">Player 2</h2>
+      <p class="Global-Score-P2 player-score" id="score-1">0</p>
 
-      <div class="result-p2">
-        <p class="text-2">Current</p>
-        <span class="number-2">23</span>
+      <div class="result-p2 player-current-label">
+        <p class="text-2 gagne">Current</p>
+        <span class="score-2 player-current-score" id="current-1">75</span>
       </div>
     </div>
 
